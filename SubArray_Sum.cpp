@@ -27,3 +27,25 @@ int main()
     cout<<"\n"<<"Max Sum = "<<max_Sum;
     return 0;
 }
+
+
+// KADANE'S  ALGORITHM
+// 1. Initialize maxSum = arr[0] and sum = 0
+// 2. Iterate through the given arrray and do :
+        // -> Add current indexed array value to the sum
+        // -> If sum gets negative make the sum = 0
+        // -> And lastly update the maxSum = max(sum,maxSum)
+
+// int main(){
+//     int n;
+//     cin>>n;
+//     int arr[n];
+//     for(int i=0;i<n;++i)    cin>>arr[i];
+//     int maxSum = arr[0] , sum = 0;
+//     for(int i=0;i<n;++i){
+//         sum += arr[i];
+//         if(sum<0)   sum = 0;
+//         maxSum = max(sum,maxSum);
+//     }
+//     cout<<maxSum<<endl;
+// }
