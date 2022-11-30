@@ -7,20 +7,15 @@ using namespace std;
 
 void nextPalindrome(long long int n){
     string s = to_string(n);
-    string firstHalf;
-    string firstHalfCopy;
+    string firstHalf = s.substr(0,(s.size())/2);
+    string firstHalfCopy = firstHalf;
+    reverse(firstHalf.begin(), firstHalf.end());
     int num;
     if(s.size()%2==0){
-        firstHalf = s.substr(0,(s.size())/2);        
-        firstHalfCopy = firstHalf;
-        reverse(firstHalf.begin(), firstHalf.end());
         num = stoi(firstHalfCopy+firstHalf);
     }
     else{
-        firstHalf = s.substr(0,(s.size()/2));
         char midOne = s[(s.size()/2)];
-        firstHalfCopy = firstHalf;
-        reverse(firstHalf.begin(), firstHalf.end());
         num = stoi(firstHalfCopy+midOne+firstHalf);
     }
     if(num>n){
