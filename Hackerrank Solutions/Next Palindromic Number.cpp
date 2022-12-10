@@ -21,11 +21,22 @@ void nextPalindrome(long long int n){
     if(num>n){
         cout<<num<<endl;
     }
-    else{
+    else{  // Basic Idea is to add trailing zeroes at the end of (firstHalfCopy+1)
         long long int x = s.size()/2; 
         n = n / pow(10, x);
         n = (n+1) * pow(10, x);
         nextPalindrome(n);   
+
+        // Strings approach
+        /*
+                long long int k;
+                if(sz%2) k = stoi(fh+s[sz/2]);
+                else k = stoi(fh);
+                k++;
+                string temp = to_string(k);
+                for(long long int i=0; i<sz/2; ++i) temp += "0";
+                nextPalindrome(stoi(temp));
+        */
     }
 }
 
